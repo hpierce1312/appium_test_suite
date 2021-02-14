@@ -1,3 +1,5 @@
 Appium-Python-Client==1.0.2
 selenium==3.141.0
+unittest-xml-reporting==3.0.4
 urllib3==1.26.3
+xmlrunner==1.7.7
