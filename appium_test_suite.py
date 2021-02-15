@@ -27,7 +27,7 @@ class AppiumTest(unittest.TestCase):
         self.driver.quit()
 
 if __name__ == '__main__':
-    with open(os.getcwd() + '/appium_test_results.xml', 'wb') as output:
+    with open(os.getcwd() + '/appium_test_results.xml', 'w') as output:
         unittest.main(
             testRunner=xmlrunner.XMLTestRunner(output=output),
             failfast=False, buffer=False, catchbreak=False)
