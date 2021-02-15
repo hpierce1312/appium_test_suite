@@ -1,5 +1,6 @@
 import unittest
-#import xmlrunner
+import xmlrunner
+import os
 from appium import webdriver
 
 class AppiumTest(unittest.TestCase):
@@ -25,6 +26,8 @@ class AppiumTest(unittest.TestCase):
     def tearDown(self):
         self.driver.quit()
 
-# if __name__ == '__main__':
-#     with open('/Users/hudsonpierce/Desktop/appium_results.xml', 'wb') as output:
-#         unittest.main(testRunner=xmlrunner.XMLTestRunner(output=output))
+if __name__ == '__main__':
+    with open(os.getcwd() + '/appium_test_results.xml', 'wb') as output:
+        unittest.main(
+            testRunner=xmlrunner.XMLTestRunner(output=output),
+            failfast=False, buffer=False, catchbreak=False)
