@@ -20,7 +20,7 @@ class AppiumTest(unittest.TestCase):
         for i in range(1, 10):
             self.driver.find_element_by_id('io.scanbot.hiring.qademo:id/counter_button').click()
             label = self.driver.find_element_by_id('io.scanbot.hiring.qademo:id/counter_label').text
-            assert label == str(i)
+            assert label == 3
             i += 1
 
     def tearDown(self):
